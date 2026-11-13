@@ -1,0 +1,36 @@
+{
+  "name": "wordpress-security-checklist",
+  "owner": {
+    "name": "WP Security Checklist",
+    "url": "https://github.com/WP-Security-Checklist"
+  },
+  "metadata": {
+    "description": "The WordPress Security Checklist (wpsecuritychecklist.org) as an agent skill."
+  },
+  "plugins": [
+    {
+      "name": "wordpress-security-checklist",
+      "description": "Audit a WordPress site against the WordPress Security Checklist, or get guided explanations of each hardening item.",
+      "source": "./skills/wordpress-security-checklist",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "homepage": "https://wpsecuritychecklist.org",
+      "repository": "https://github.com/WP-Security-Checklist/skill",
+      "license": "GPL-2.0-only",
+      "keywords": [
+        "wordpress",
+        "security",
+        "hardening",
+        "audit",
+        "checklist"
+      ],
+      "category": "security",
+      "author": {
+        "name": "Rafael Funchal",
+        "url": "https://github.com/RafaelFunchal"
+      }
+    }
+  ]
+}

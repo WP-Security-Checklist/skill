@@ -91,7 +91,7 @@ The script fails if the website's languages have different item IDs, or if `chec
 - **New item:** run the sync script, then add the item's entry to `references/checks.md` (Why, Check, Fix) in the same pull request.
 - **Audit logic or safety rules:** edit `SKILL.md` or `checks.md`, and test the skill with a real agent before opening a pull request. A fake WordPress folder with planted problems (a `root` database user, a default `AUTH_KEY`, a `wp-config.php.bak`) works well.
 
-The idea for this skill came from the WordPress São Paulo community security meetup ([website#76](https://github.com/WP-Security-Checklist/website/issues/76)).
+The idea for this skill came from the WordPress São Paulo community security meetup ([#1](https://github.com/WP-Security-Checklist/skill/issues/1)).
 
 ## License
 

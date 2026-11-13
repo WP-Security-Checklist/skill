@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "name": "wordpress-security-checklist",
+      "name": "wpsc",
       "description": "Audit a WordPress site against the WordPress Security Checklist, or get guided explanations of each hardening item.",
       "source": "./skills/wordpress-security-checklist",
       "strict": false,

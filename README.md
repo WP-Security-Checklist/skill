@@ -21,13 +21,13 @@ npx skills add WP-Security-Checklist/skill
 npx skills add WP-Security-Checklist/skill -g
 ```
 
-**Claude Code plugin**, which you can update with `/plugin update`:
+**Claude Code plugin**, which you can update with `/plugin update wpsc`:
 
 ```
-/plugin install wordpress-security-checklist --marketplace WP-Security-Checklist/skill
+/plugin install wpsc --marketplace WP-Security-Checklist/skill
 ```
 
-On Claude Code versions before 2.1.275, run `/plugin marketplace add WP-Security-Checklist/skill` first, then `/plugin install wordpress-security-checklist@wordpress-security-checklist`.
+On Claude Code versions before 2.1.275, run `/plugin marketplace add WP-Security-Checklist/skill` first, then `/plugin install wpsc@wordpress-security-checklist`.
 
 **Without Node.js or git**, download only the skill folder:
 
@@ -44,12 +44,31 @@ Run the same command again to update.
 
 ## Use
 
-Ask your agent, for example:
+You don't need a command. Agents load the skill automatically when a request matches it. Ask your agent, for example:
 
 - "Audit this WordPress site against the security checklist."
 - "Check https://example.com for the checklist items you can verify remotely. I own the site."
 - "What does the XML-RPC item mean, and should I disable it?"
 - "Me ajude a aplicar o checklist de segurança no meu site WordPress."
+
+### Commands
+
+To call the skill directly, use its command. The form depends on your agent and how you installed it:
+
+| Installed with | Agent | Command |
+|---|---|---|
+| `npx skills add` or `curl` | Claude Code | `/wordpress-security-checklist` |
+| Claude Code plugin | Claude Code | `/wpsc:wordpress-security-checklist` |
+| `npx skills add` or `curl` | Codex | `$wordpress-security-checklist` (`/skills` lists installed skills) |
+
+Anything after the command is your request, and it decides the mode:
+
+```
+/wordpress-security-checklist audit this site, files and WP-CLI only, it's production
+/wordpress-security-checklist audit https://example.com (I own it)
+/wordpress-security-checklist explain the XML-RPC item
+/wordpress-security-checklist me guie pelo checklist passo a passo
+```
 
 ## Safety
 
